@@ -1,0 +1,87 @@
+@import url("https://fonts.googleapis.com/css2?family=Kalam:wght@300;400;700&family=Pacifico&family=Shantell+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&family=Tangerine:wght@400;700&display=swap");
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: "Shantell Sans";
+}
+
+/*classes globais*/
+.none {
+  display: none;
+}
+
+body {
+  background-color: #ffd2d6;
+}
+
+header {
+  display: flex;
+  flex-direction: column;
+}
+
+header p {
+  width: 273px;
+  background-color: #581d22;
+  color: white;
+  border-radius: 10px;
+  padding: 30px;
+  font-size: 16pt;
+  align-self: flex-end;
+  margin-right: 30px;
+  margin-bottom: 65px;
+  position: relative;
+}
+
+header p::before {
+  content: url(../image/10-small.png);
+  position: absolute;
+  left: 0;
+  top: 0;
+  transform: translate(-75px, -65px);
+}
+
+header button {
+  cursor: pointer;
+  order: -1;
+  background: none;
+  border: none;
+  width: max-content;
+  margin: 10px 0 90px 30px;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+}
+
+main p {
+  width: 355px;
+  color: #581d22;
+  font-size: 16pt;
+  font-weight: 500;
+  margin: 0 auto 165px;
+}
+
+main button {
+  color: white;
+  font-size: 20pt;
+  border: none;
+  background-color: #581d22;
+  border-radius: 10px;
+  padding: 12px 25px;
+  font-weight: 500;
+  width: max-content;
+  align-self: flex-end;
+  margin: 0 65px 30px 0;
+  position: relative;
+}
+
+main button::before {
+  content: url(../image/9-small.png);
+  position: absolute;
+  top: 0;
+  left: 0;
+  transform: translate(53px, -58px);
+}

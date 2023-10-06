@@ -1,0 +1,65 @@
+@import url("https://fonts.googleapis.com/css2?family=Kalam:wght@300;400;700&family=Pacifico&family=Shantell+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&family=Tangerine:wght@400;700&display=swap");
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: "Shantell Sans";
+}
+
+/*classes globais*/
+.none {
+  display: none;
+}
+
+body {
+  background-color: #ffd2d6;
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+}
+
+p {
+  font-size: 15pt;
+  color: #581d22;
+  font-weight: 800;
+  min-width: 350px;
+  max-width: 600px;
+  margin: 270px auto 200px;
+  padding: 0 90px;
+  text-align: center;
+}
+/*mickey*/
+p::before {
+  content: url(../image/2-small.png);
+  position: absolute;
+  transform: translate(-65px, -180px);
+}
+
+#btn {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#btn > button {
+  width: 70%;
+  min-width: 250px;
+  max-width: 500px;
+  margin: 15px 0;
+  height: 40px;
+  font-size: 15pt;
+  font-weight: bold;
+  border-radius: 10px;
+  border: none;
+}
+
+#sair {
+  background-color: #c5efff;
+  color: black;
+}
+
+#missoes {
+  background-color: #581d22;
+  color: white;
+}

@@ -1,0 +1,125 @@
+@import url("https://fonts.googleapis.com/css2?family=Kalam:wght@300;400;700&family=Pacifico&family=Shantell+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&family=Tangerine:wght@400;700&display=swap");
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: "Shantell Sans";
+}
+
+/*classes globais*/
+.none {
+  display: none;
+}
+/*==========================================================================================*/
+header {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin-bottom: 60px;
+  padding: 35px 35px 0;
+}
+
+header div#conteudo {
+  width: 100%;
+  margin: 70px auto 0;
+}
+
+header div#conteudo h1 {
+  width: 90%;
+  font-size: 12pt;
+  font-weight: bold;
+}
+
+header figure:first-child {
+  margin-top: 70px;
+  margin-left: 25%;
+  transform: translate(-50%, 0px);
+}
+
+/*=====================================================*/
+main {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin: 0 auto;
+  max-width: 600px;
+}
+
+main div#texto {
+  margin: 40px 35px;
+  font-size: 12pt;
+  font-weight: 600;
+  border: solid 1px #c3c3c3;
+  min-width: 350px;
+  max-width: 600px;
+}
+
+main div#texto p {
+  margin: 40px auto;
+  text-align: center;
+}
+
+main div#texto q {
+  font-style: italic;
+  font-size: 12pt;
+  font-weight: 400;
+}
+
+/*=======================================================================================*/
+section#card {
+  min-width: 300px;
+  max-width: 1000px;
+  margin: 0 35px 100px;
+  padding-bottom: 10px;
+  display: flex;
+  justify-content: end;
+}
+
+section#card div#content {
+  background-color: #581d22;
+  border-radius: 10px;
+  padding: 7px 10px;
+  color: white;
+  font-weight: 700;
+  width: 40%;
+  text-align: center;
+  max-width: 200px;
+}
+
+section#respostas > div#content > div > button {
+  font-weight: 700;
+  color: white;
+  border: none;
+  background: none;
+  margin: 0 auto;
+}
+
+/*botão avancar*/
+section#btn-conte {
+  display: flex;
+  margin-bottom: 35px;
+  position: relative;
+}
+
+section#btn-conte::before {
+  content: url(../image/3-small.png);
+  position: absolute;
+  top: -321%;
+  left: 25%;
+  transform: translate(75%, -1%);
+}
+
+section#btn-conte button {
+  margin: 0 auto;
+  width: 90%;
+  min-width: 200px;
+  max-width: 400px;
+  background-color: #581d22;
+  color: white;
+  font-weight: 700;
+  border-radius: 10px;
+  border: none;
+  padding: 7px 0px;
+  font-size: 15pt;
+}
