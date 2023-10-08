@@ -30,5 +30,4 @@ function avancar() {
     setTimeout(
         () => { window.location = `/pages/missao-concluida.html?userName=${user}` }
         , 750)
-
 }
