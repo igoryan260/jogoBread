@@ -12,10 +12,6 @@ if (usuarioLocalizado == null) {
     window.location = "/index.html"
 }
 
-//destruir sessões da primeira missão
-if (sessionStorage.getItem("missaoUm")) {
-    sessionStorage.removeItem("missaoUm")
-}
 if (sessionStorage.getItem("indicesPerguntas")) {
     sessionStorage.removeItem("indicesPerguntas")
 }

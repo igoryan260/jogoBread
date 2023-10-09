@@ -24,8 +24,15 @@ function avancar() {
     let jogador = JSON.parse(localStorage.getItem(user))
     jogador.pontuacao += 1
     jogador.missoes[1].status_missao = "completo"
-    jogador.missoes[2].status_missao = "pendente"
+    if (jogador.missoes[2].status_missao != "completo") {
+        jogador.missoes[2].status_missao = "pendente"
+    }
     localStorage.setItem(user, JSON.stringify(jogador))
+
+    //destruir sessão
+    setTimeout(() => {
+        sessionStorage.removeItem("missaoDois")
+    }, 750);
 
     setTimeout(
         () => { window.location = `/pages/missao-concluida.html?userName=${user}` }

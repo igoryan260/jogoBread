@@ -32,6 +32,8 @@ function abrirSessoes() {
 
 function pergunta(numeroPergunta) {
     if (numeroPergunta == 0) {
+        //se houver outra imagem na tela, apagar antes de adicionar a nova imagem
+        document.querySelector("#pergunta").innerHTML = ""
         //pergunta 
         let img = document.createElement("img")
         img.id = "momento"
@@ -51,6 +53,8 @@ function pergunta(numeroPergunta) {
     </div>
     `
     } else if (numeroPergunta == 1) {
+        //se houver outra imagem na tela, apagar antes de adicionar a nova imagem
+        document.querySelector("#pergunta").innerHTML = ""
         //pergunta 
         let img = document.createElement("img")
         img.id = "momento"
@@ -70,6 +74,8 @@ function pergunta(numeroPergunta) {
      </div>
      `
     } else if (numeroPergunta == 2) {
+        //se houver outra imagem na tela, apagar antes de adicionar a nova imagem
+        document.querySelector("#pergunta").innerHTML = ""
         //pergunta 
         let img = document.createElement("img")
         img.id = "momento"
@@ -89,6 +95,8 @@ function pergunta(numeroPergunta) {
       </div>
       `
     } else if (numeroPergunta == 3) {
+        //se houver outra imagem na tela, apagar antes de adicionar a nova imagem
+        document.querySelector("#pergunta").innerHTML = ""
         //pergunta 
         let img = document.createElement("img")
         img.id = "momento"
@@ -108,6 +116,8 @@ function pergunta(numeroPergunta) {
       </div>
       `
     } else if (numeroPergunta == 4) {
+        //se houver outra imagem na tela, apagar antes de adicionar a nova imagem
+        document.querySelector("#pergunta").innerHTML = ""
         //pergunta     
         document.querySelector("#pergunta").innerHTML = `<video width="100%" height="100%" controls autoplay>
         <source
@@ -128,6 +138,8 @@ function pergunta(numeroPergunta) {
       </div>
       `
     } else if (numeroPergunta == 5) {
+        //se houver outra imagem na tela, apagar antes de adicionar a nova imagem
+        document.querySelector("#pergunta").innerHTML = ""
         //pergunta 
         let img = document.createElement("img")
         img.id = "momento"
@@ -147,6 +159,8 @@ function pergunta(numeroPergunta) {
       </div>
       `
     } else if (numeroPergunta == 6) {
+        //se houver outra imagem na tela, apagar antes de adicionar a nova imagem
+        document.querySelector("#pergunta").innerHTML = ""
         //pergunta
         document.querySelector("#pergunta").innerHTML = "<a href='https://youtu.be/N7VCLNBNJQs?si=gpI2AVWpLGID7w3j' target='_blank'>Abrir</a>"
         //respostas
@@ -216,11 +230,19 @@ function verificarResolucao() {
     let resposta;
 
     switch (numeroPergunta) {
-        case "0": resposta = "30/01"
+        case "0": resposta = "2º Encontro"
             break;
-        case "1": resposta = "Você beijou"
+        case "1": resposta = "1ª vez Mil Grau"
             break;
-        case "2": resposta = "Branca"
+        case "2": resposta = "Pedido de namoro"
+            break;
+        case "3": resposta = "1 mês de namoro"
+            break;
+        case "4": resposta = "Eu to certo"
+            break;
+        case "5": resposta = "Setembro de 2023"
+            break;
+        case "6": resposta = "Musica marcante"
             break;
     }
 
@@ -256,15 +278,23 @@ function avancarPergunta() {
 
     let numeroPerguntaAtual = parseInt(sessionStorage.getItem("missaoTres"))
 
-    sessionStorage.setItem("missaoUm", numeroPerguntaAtual + 1)
+    sessionStorage.setItem("missaoTres", numeroPerguntaAtual + 1)
 
-    if (numeroPerguntaAtual >= 2) {
+    if (numeroPerguntaAtual >= 6) {
         //atualizar status da missao do usuario
         let jogador = JSON.parse(localStorage.getItem(user))
-        jogador.missoes[0].status_missao = "completo"
-        jogador.missoes[1].status_missao = "pendente"
+        jogador.missoes[2].status_missao = "completo"
+        if (jogador.missoes[3].status_missao != "completo") {
+            jogador.missoes[3].status_missao = "pendente"
+        }
 
         localStorage.setItem(user, JSON.stringify(jogador))
+
+        //destruir sessão
+        setTimeout(() => {
+            sessionStorage.removeItem("missaoTres")
+        }, 750);
+
 
         setTimeout(
             () => { window.location = `/pages/missao-concluida.html?userName=${user}` }

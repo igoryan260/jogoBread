@@ -171,7 +171,14 @@ function avancarPergunta() {
         //atualizar status da missao do usuario
         let jogador = JSON.parse(localStorage.getItem(user))
         jogador.missoes[0].status_missao = "completo"
-        jogador.missoes[1].status_missao = "pendente"
+        if (jogador.missoes[1].status_missao != "completo") {
+            jogador.missoes[1].status_missao = "pendente"
+        }
+
+        //destruir sessão        
+        setTimeout(() => {
+            sessionStorage.removeItem("missaoUm")
+        }, 750);
 
         localStorage.setItem(user, JSON.stringify(jogador))
 
