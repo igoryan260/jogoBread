@@ -119,3 +119,7 @@ main > div > div > button {
 div#missao-1 > div {
   transform: translateX(-60%);
 }
+
+div#missao-6 > div {
+  transform: translateX(-10%);
+}
