@@ -31,26 +31,34 @@
         </div>
     </main>
 
-    <section id="btn-prox">
-        <button id="btnOk" onclick="verificarResolucao()">Ok</button>
-    </section>
-
-    <!--Modal para correto ou incorreto -->
-    <section id="resolucao" class="none">
-        <div id="modal-title">
-            <!--Icone correto-->
-            <figure id="iconCorrect" class="none">
-                <img src="../icons/verifica.png" alt="">
+    <!-- Overlay "fim" -->
+    <section id="overlay" class="">
+        <figure onclick="fecharOverlay()">
+            <img src="../icons/letra-x-small.png" alt="" srcset="">
+        </figure>
+        <div id="surprise">
+            <p>Um beijo</p>
+            <figure>
+                <img src="../icons/coracao-small.png">
             </figure>
-            <!--Icone incorreto-->
-            <figure id="iconIncorrect" class="none">
-                <img src="../icons/botao-x.png" alt="">
-            </figure>
-            <p id="paragrafoModal">Correto</p>
         </div>
-        <button id="proxima" onclick="avancarPergunta()">Próximo</button>
+        <div>
+            <p>
+                Fim!!!
+            </p>
+        </div>
     </section>
 
+    <section id="video-surpresa" class="none">
+        <iframe width="100%" height="236" src="https://www.youtube.com/embed/kS6oLZm5-Qg?si=BR-mZIRQWRFFyGxn"
+            title="YouTube video player" frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            allowfullscreen></iframe>
+    </section>
+
+    <section id="btn-prox">
+        <button id="btnOk" onclick="abrirSurpresa()">Abrir surpresa</button>
+    </section>
     <script src="../js/missao-7.js"></script>
 </body>
 

@@ -155,3 +155,57 @@ section#resolucao button {
   height: 100%;
   transition: 0.5s;
 }
+
+/*================================*/
+/*overlay*/
+
+section#overlay {
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  z-index: 1;
+  top: 0;
+  background-color: white;
+  justify-content: center;
+  display: flex;
+  flex-direction: column;
+}
+
+section#overlay > figure {
+  position: absolute;
+  right: 35px;
+  top: 35px;
+}
+
+section#overlay div {
+  width: 100%;
+  max-width: 762px;
+  min-width: 350px;
+  height: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-around;
+}
+section#overlay div#surprise {
+  align-items: flex-end;
+}
+
+section#overlay div#surprise p {
+  font-size: 20pt;
+  color: #c40606;
+  font-weight: bold;
+  position: relative;
+}
+section#overlay div#surprise p::after {
+  content: url(../image/1-small.png);
+  position: absolute;
+  top: -20px;
+  left: 115%;
+}
+
+section#overlay div p {
+  font-size: 20pt;
+  color: black;
+  font-weight: bold;
+}
