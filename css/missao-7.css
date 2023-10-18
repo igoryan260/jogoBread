@@ -209,3 +209,25 @@ section#overlay div p {
   color: black;
   font-weight: bold;
 }
+
+/********************************************************************************************/
+section#video-surpresa {
+  position: absolute;
+  top: 0px;
+  left: 50%;
+  background: black;
+  transform: translate(-50%, 0px);
+  height: 100%;
+  width: 100%;
+}
+
+section#video-surpresa button {
+  position: absolute;
+  background: none;
+  color: white;
+  font-weight: 800;
+  border: none;
+  top: 5px;
+  left: 35px;
+  z-index: 5;
+}

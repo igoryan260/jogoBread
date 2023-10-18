@@ -34,3 +34,10 @@ function fecharOverlay() {
 function abrirSurpresa() {
     document.querySelector("#video-surpresa").classList.replace("none", "flex")
 }
+
+function fecharVideoSurpresa() {
+    alert("Parabéns, você acaba de concluir o Bread Gaming, até logo...")
+    document.querySelector("#video-surpresa").classList.replace("flex", "none")
+    sessionStorage.removeItem(user)
+    window.location.reload()
+}

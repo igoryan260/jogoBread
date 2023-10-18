@@ -108,6 +108,9 @@ formLogin.addEventListener("submit", (event) => {
     } else if (usuarioLocalizado == null) {
         alert("Usuário ou senha estão incorretos")
         event.preventDefault()
+    } else if (parseInt(JSON.parse(usuarioLocalizado).senha) != senha) {
+        alert("Usuário ou senha estão incorretos")
+        event.preventDefault()
     } else {
         let usuario = new Usuario(userName, "", senha, usuarioLocalizado)
         usuario.login()
