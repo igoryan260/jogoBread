@@ -218,7 +218,6 @@ section#video-surpresa {
   background: black;
   transform: translate(-50%, 0px);
   height: 100%;
-  display: flex;
   width: 100%;
 }
 
@@ -238,6 +237,9 @@ section#video-surpresa a {
   color: white;
   font-weight: 800;
   border: none;
-  margin: auto;
+  position: absolute;
   font-style: italic;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, 50%);
 }
