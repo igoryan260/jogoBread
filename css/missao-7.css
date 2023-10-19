@@ -218,6 +218,7 @@ section#video-surpresa {
   background: black;
   transform: translate(-50%, 0px);
   height: 100%;
+  display: flex;
   width: 100%;
 }
 
@@ -230,4 +231,13 @@ section#video-surpresa button {
   top: 5px;
   left: 35px;
   z-index: 5;
+}
+
+section#video-surpresa a {
+  background: none;
+  color: white;
+  font-weight: 800;
+  border: none;
+  margin: auto;
+  font-style: italic;
 }
