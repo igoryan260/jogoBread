@@ -18,26 +18,30 @@ btnFecharMissao.addEventListener("click", () => {
     window.location = `/pages/telaPrincipal.html?userName=${user}`
 })
 
-//abrir sessões do jogador
-//Sessão para verificar qual pergunta o jogador está e assim animar o progresso
-//Após cada pergunta, atuaizar a pontuação, e de acordo com a pontuação será definido para onde o jogador deverá ser redirecionado
-
-//abrirSessoes()
-//function abrirSessoes() {
-//}
-
 function fecharOverlay() {
     sessionStorage.removeItem("overlayActive")
     document.querySelector("#overlay").style.display = "none"
 }
 
 function abrirSurpresa() {
-    document.querySelector("#video-surpresa").classList.replace("none", "flex")
+    let pontuacaoUsuario = JSON.parse(localStorage.getItem(user)).pontuacao
+    if (pontuacaoUsuario < 15) {
+        alert("Você precia atingir no mínimo 15 pontos para abrir a surpresa.")
+    } else {
+        document.querySelector("#video-surpresa").classList.replace("none", "flex")
+    }
 }
 
 function fecharVideoSurpresa() {
-    alert("Parabéns, você acaba de concluir o Bread Gaming, até logo...")
+    //Atualizar status da missão
+    let jogador = JSON.parse(localStorage.getItem(user))
+    jogador.missoes[6].status_missao = "completo"
+    localStorage.setItem(user, JSON.stringify(jogador))
+
+    alert("Parabéns por ter completado o Bread Gaming, até logo!!!")
     document.querySelector("#video-surpresa").classList.replace("flex", "none")
-    sessionStorage.removeItem(user)
-    window.location.reload()
+    setTimeout(() => {
+        sessionStorage.removeItem(user)
+        window.location.reload()
+    }, 750);
 }
