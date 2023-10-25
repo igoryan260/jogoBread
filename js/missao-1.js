@@ -139,12 +139,20 @@ function verificarResolucao() {
         document.querySelector("#iconIncorrect").classList.remove("none")
         document.querySelector("#iconCorrect").classList.add("none")
         document.querySelector("#paragrafoModal").innerHTML = "Uma mordida"
+
+        //adicionando efeito sonoro
+        const audioIncorrect = new Audio('../music/respostaErrada.mp3')
+        audioIncorrect.play();
     } else {
         //resolução correta
         document.querySelector("#resolucao").className = "resolucaoCorreta"
         document.querySelector("#iconCorrect").classList.remove("none")
         document.querySelector("#iconIncorrect").classList.add("none")
         document.querySelector("#paragrafoModal").innerHTML = "Correto"
+
+        //adicionando efeito sonoro
+        const audioCorrect = new Audio('../music/respostaCerta.mp3')
+        audioCorrect.play();
 
         //atualizar pontuação do jogador
         let jogador = JSON.parse(localStorage.getItem(user))

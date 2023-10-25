@@ -26,7 +26,7 @@ function fecharOverlay() {
 function abrirSurpresa() {
     let pontuacaoUsuario = JSON.parse(localStorage.getItem(user)).pontuacao
     if (pontuacaoUsuario < 15) {
-        alert("Você precia atingir no mínimo 15 pontos para abrir a surpresa.")
+        alert("Você precisa atingir no mínimo 15 pontos para abrir a surpresa.")
     } else {
         document.querySelector("#video-surpresa").classList.replace("none", "flex")
     }
